@@ -1,0 +1,2 @@
+build/pgbadger usr/local/bin
+build/resources usr/local/lib/pgbadger

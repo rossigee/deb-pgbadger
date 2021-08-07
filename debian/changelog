@@ -1,0 +1,5 @@
+pgbadger (11.5-0) UNRELEASED; urgency=medium
+
+  * Initial packaging.
+
+ -- Ross Golder <ross@golder.org>  Sat, 07 Aug 2021 08:53:28 +0700

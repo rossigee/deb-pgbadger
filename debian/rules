@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+#DISTRIBUTION = $(shell lsb_release -sr)
+VERSION = 11.5
+PACKAGEVERSION = $(VERSION)
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf build && mkdir build
+
+override_dh_auto_test:
+override_dh_auto_build:
+override_dh_auto_install:
+	curl -sSL -o pgbadger-$(VERSION).tar.gz https://github.com/darold/pgbadger/archive/refs/tags/v11.5.tar.gz
+	tar xvfz pgbadger-$(VERSION).tar.gz -C build --strip-components 1
+	#cd build && perl Makefile.PL INSTALLDIRS=dist
+
+override_dh_gencontrol:
+	dh_gencontrol -- -v$(PACKAGEVERSION)
+
+override_dh_usrlocal:

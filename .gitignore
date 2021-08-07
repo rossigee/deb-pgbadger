@@ -1,0 +1,7 @@
+build
+debian/*.log
+debian/*.substvars
+debian/.debhelper
+debian/files
+debian/pgbadger
+pgbadger-*.tar.gz

@@ -1,0 +1,9 @@
+Source: pgbadger
+Section: accessories
+Priority: optional
+Maintainer: Gilles Darold <gilles@darold.net>
+Build-Depends: debhelper (>= 9), curl, perl-base
+
+Package: pgbadger
+Architecture: any
+Description: Processes RDS query logs into HTML statistics pages with graphs.
